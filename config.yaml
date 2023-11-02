@@ -1,0 +1,14 @@
+
+pipeline_params:
+  task: "text2text-generation"  # text-generation for llama
+  model : "mrm8488/t5-base-finetuned-wikiSQL"  #  "meta-llama/Llama-2-7b-chat-hf"
+  max_new_tokens: 512  # kwargs
+  top_k: 10
+  # torch_dtype: torch.bfloat16,  # activate this option for llama2
+  device_map: "auto" # GPU or CPU, auto for automatic selection
+  max_new_tokens: 512
+  # do_sample: True  # activate for llama2
+  # num_return_sequences: 1   # activate for llama2
+
+model_kwargs:
+   model_temperature: 0
