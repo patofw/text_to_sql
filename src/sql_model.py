@@ -54,9 +54,8 @@ class TextToSQLModel:
         )
 
     def _build_model_pipeline(self):
-        print(self.model_params)
+        logger.info(f"Model Params: {self.model_params}")
         pipeline = transformers.pipeline(
-
           **self.model_params
         )
         if self.save_model:
